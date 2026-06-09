@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # --- Security ---
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-ed7783wk56iwq5!savl=+s#2k8rx#90_r=83aphfw)9k^6**2@')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['psc-thulika-production.up.railway.app']
 
 # --- Apps ---
 INSTALLED_APPS = [
