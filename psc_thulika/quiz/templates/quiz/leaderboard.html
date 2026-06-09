@@ -1,0 +1,21 @@
+{% extends 'quiz/base.html' %}
+
+{% block content %}
+<h3>{{ quiz.title }} - Leaderboard</h3>
+
+<table class="table table-striped">
+    <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Score</th>
+    </tr>
+
+    {% for result in results %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ result.user_name }}</td>
+        <td>{{ result.score }}/{{ result.total }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

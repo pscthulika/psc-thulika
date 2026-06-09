@@ -1,0 +1,14 @@
+{% extends 'quiz/base.html' %}
+
+{% block content %}
+<div class="card p-4 col-md-6 mx-auto">
+    <h3>{{ quiz.title }}</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" 
+               class="form-control mb-3"
+               placeholder="Enter Your Name" required>
+        <button class="btn btn-success w-100">Start Exam</button>
+    </form>
+</div>
+{% endblock %}

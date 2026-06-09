@@ -1,0 +1,28 @@
+{% extends 'quiz/base.html' %}
+
+{% block content %}
+<div class="col-md-6 mx-auto shadow rounded p-4">
+
+    <h3 class="mb-4">Create New Quiz</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="title" class="form-label">Quiz Title</label>
+            <input type="text" name="title" id="title" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Quiz Description</label>
+            <textarea name="description" id="description" class="form-control" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Create Quiz</button>
+    </form>
+
+    <a href="{% url 'admin_dashboard' %}" class="btn btn-secondary mt-3 w-100">Back to Dashboard</a>
+
+</div>
+
+{% endblock %}

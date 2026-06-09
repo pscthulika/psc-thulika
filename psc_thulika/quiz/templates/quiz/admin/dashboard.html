@@ -1,0 +1,24 @@
+{% extends 'quiz/base.html' %}
+
+{% block content %}
+<h2>Admin Dashboard</h2>
+
+<a href="{% url 'create_quiz' %}" class="btn btn-success mb-3">
+    Create New Quiz
+</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Quiz Title</th>
+        <th>Description</th>
+    </tr>
+
+    {% for quiz in quizzes %}
+    <tr>
+        <td>{{ quiz.title }}</td>
+        <td>{{ quiz.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
